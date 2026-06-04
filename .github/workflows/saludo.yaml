@@ -13,6 +13,6 @@ jobs:
 			-name: Saludo desde main
 			run: echo "Hola desde main, soy Diego Escobedo"
 
-			-name: Saludo desde main
+			-name: Saludo desde develop
 			run: echo "Hola desde develop, soy Diego Escobedo"
 
