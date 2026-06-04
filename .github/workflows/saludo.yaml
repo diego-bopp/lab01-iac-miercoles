@@ -2,9 +2,12 @@ name: Saludo
 
 on:
 	push:
-		branches:
-		    - main
-		    - develop
+branches:
+	- main
+	- develop
+
+env:
+	Nombre: 'Diego Escobedo Bopp'
 
 jobs:
 	saludo:
@@ -12,9 +15,9 @@ jobs:
 		steps:
 			-name: Saludo desde main
 			if: gitHub.ref == 'refs/heads/main'
-			run: echo "Hola desde main, soy Diego Escobedo"
+			run: echo "Hola desde main, soy $Nombre"
 
 			-name: Saludo desde develop
 			if: gitHub.ref == 'refs/heads/develop'
-			run: echo "Hola desde develop, soy Diego Escobedo"
+			run: echo "Hola desde develop, soy $Nombre"
 
