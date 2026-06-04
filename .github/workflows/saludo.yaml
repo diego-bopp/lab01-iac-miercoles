@@ -11,8 +11,10 @@ jobs:
 		runs-om: ubuntu-latest
 		steps:
 			-name: Saludo desde main
+			if: gitHub.ref == 'refs/heads/main'
 			run: echo "Hola desde main, soy Diego Escobedo"
 
 			-name: Saludo desde develop
+			if: gitHub.ref == 'refs/heads/develop'
 			run: echo "Hola desde develop, soy Diego Escobedo"
 
